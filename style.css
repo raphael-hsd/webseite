@@ -1,0 +1,236 @@
+/* Zunächst habe ich mir zwei Fonts ausgesucht, eine mit Serifen und eine ohne, mit denen ich in meinem Webprojekt arbeiten wollte, und sie hier eingefügt.
+   Für die Überschriften habe ich eine Schriftart mit Serifen gewählt, Fließtexte wollte ich aber "sauberer" und schnörkellos gestalten.*/
+
+@font-face {
+    font-family: 'Cormorant Garamont';
+    font-style: normal;
+    font-weight: 400;
+    src: url('Fonts/cormorant-garamond-v16-latin-regular.woff2') format('woff2'), url('Fonts/cormorant-garamond-v16-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mohave';
+    font-style: normal;
+    font-weight: 400;
+    src: url('Fonts/mohave-v8-latin-regular.woff2') format('woff2'), url('Fonts/mohave-v8-latin-regular.woff') format('woff');
+}
+
+/* Ich mag es insgesamt mehr, wenn eine Webseite einen klaren Aufbau hat und farblich neutral gestaltet ist. Meine Grundfarbe ist daher weiß geblieben.
+   Allerdings mochte ich "lightcoral" sehr gerne für kleine Akzente und habe beispielsweise die Seitenüberschrift in der Farbe gestaltet. */
+
+.header {
+    font-family: "Cormorant Garamont", serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: lightcoral;
+    text-align: center;
+    margin-top: 1.9rem;
+    margin-bottom: 2.5rem;
+}
+
+.navbar {
+    font-family: "Cormorant", serif;
+    text-align: center;
+}
+
+.navbarentry { /* Um die Abstände zwischen den einzelnen Unterpunkten in der Navbar zu vergrößern, habe ich jedem Unterpunkt noch eine zweite class zugewiesen */
+    font-size: 1.7rem;
+    margin-left: 4.4rem;
+    margin-right: 4.4rem;
+    color: #000000;
+    font-weight: normal;
+    text-decoration-style: double;
+    text-decoration-thickness: 3px;
+    text-decoration-color: lightcoral;
+}
+
+.texthome {
+    font-family: Mohave, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.picturehome {
+    text-align: center;
+    margin-bottom: 2rem;
+    filter: saturate(30%); /* Sättigung herabsetzen */
+    -webkit-filter: saturate(30%);
+}
+
+/* Persönlich finde ich es schön, wenn es schon auf der Home-Seite etwas zu entdecken gibt. Daher habe ich mich für diesen Hover-Effekt entschieden.
+   Wie genau die Hover-Effekte funktionieren, habe ich im Internet nachgeschaut. */
+
+.picturehome:hover {
+    filter: none; /* Filter aufheben, wenn die Maus über das Bild bewegt wird. */
+    -webkit-filter: none;
+}
+
+.videohome {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3rem; /* Erst nachdem ich diese Befehle in einem Internetforum gefunden habe, hat sich das Video zentrieren lassen.
+                            Zuvor hatte ich es mit "text-align" versucht. Warum ich dort "display: block" und "margin: 0 auto" nutzen muss, würde ich gerne nochmal detailliert erfahren wollen. */
+}
+
+.linkstyle {
+    color: #000000;
+    font-weight: normal;
+    text-decoration-style: double;
+    text-decoration-thickness: 3px;
+    text-decoration-color: lightcoral;
+}
+
+.footer { /* Dass es für einen Abbinder unten auf einer Webseite noch einen extra Befehl ("footer") gibt, habe ich durch Internetrecherche herausgefunden. */
+    font-family: Mohave, sans-serif;
+    font-size: 1rem;
+    background-color: lightcoral;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.footerlink {
+    color: black;
+    text-decoration-color: lightcoral;
+}
+
+.uebermich { /* Ich habe insgesamt hauptsächlich mit rem statt px gearbeitet, da sich somit besser responsive Designs erstellen lassen. */
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+}
+
+.picturedrums {
+    float: left;
+    margin-right: 2rem;
+}
+
+.textuebermich {
+    font-family: Mohave, sans-serif;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.clear { /* Hiermit habe ich den "float"-Befehl von "picturedrums" aufgehoben, damit nachfolgende Elemente nicht mehr davon beeinflusst werden. */
+    clear: left;
+    margin-bottom: 3rem;
+}
+
+.textdownloads {
+    font-family: Mohave, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.ueberschrift {
+    font-family: "Cormorant Garamont", serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+.textprojekte {
+    font-family: Mohave, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.podcast {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.podcast2 { /* Um die Abstände zwischen den einzelnen Bildern zu vergrößern, habe ich jedem Bild noch eine zweite "class" zugewiesen */
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#hover1 { /* Da ich jedem einzelnen Bild eine weitere, aber gleiche "class" zugewiesen habe, habe ich bei diesem Hover-Effekt mit IDs gearbeitet. */
+    filter: grayscale(100%); /* Bild wird schwarz-weiß. */
+    -webkit-filter: grayscale(100%);
+}
+
+#hover1:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+#hover2 {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+#hover2:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+#hover3 {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+#hover3:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+#hover4 {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+#hover4:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+.embed {
+    float: left;
+    margin-left: 8%;
+    margin-right: 5%;
+    /* Ich wusste nicht, wie und mit welchem Befehl ich die eingebetteten Elemente hätte zentrieren können. Daher habe ich mit den Prozenten herumgespielt, um sie möglichst mittig ins Bild zu bekommen.
+       Vergrößert oder verkleinert sich das Browser-Fenster, sind die Elemente aber leider nicht mehr mittig. */
+}
+
+.textkontakt {
+    font-family: Mohave, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.formular { /* Ich wollte sehr gerne ein klassisches Formular auf der Webseite einbauen, über welches man mich erreichen könnte.
+               Wie das geht, habe ich durch Internetrecherche in Erfahrung gebracht. */
+    font-family: Mohave, sans-serif;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    text-align: left;
+}
+
+form {
+    background-color: lightcoral;
+    width: 30rem; /* Breite der Box des Formulars. */
+    padding: 20px;
+    border: 0.1rem solid black; /* Umrandung der Box. */
+}
+
+label { /* Sorgt dafür, dass die Zeilen untereinander angeordnet sind. */
+    display: block;
+}
+
+textarea { /* Größe des Texteingabefeldes. */
+    height: 10rem;
+    width: 30rem;
+}
+
+.button {
+    background-color: white;
+    font-family: Mohave, sans-serif;
+    font-size: 1rem;
+}
